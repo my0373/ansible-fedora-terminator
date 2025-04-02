@@ -1,0 +1,19 @@
+[global_config]
+[keybindings]
+[profiles]
+  [[default]]
+    font = Hack 24
+    scrollback_infinite = True
+    use_custom_command = True
+    custom_command = /usr/bin/tmux
+    use_system_font = False
+    title_transmit_bg_color = "#26a269"
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+[plugins]

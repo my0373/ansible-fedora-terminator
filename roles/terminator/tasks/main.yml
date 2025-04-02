@@ -1,0 +1,8 @@
+---
+# tasks file for terminator
+- name: Print the operating system
+  debug:
+    msg: "Running terminator setup for {{ ansible_facts['os_family'] }}"
+
+- name: Run tasks for Fedora family
+  include_tasks: "{{ansible_facts['os_family']}}.yaml"

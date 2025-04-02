@@ -1,0 +1,5 @@
+---
+- name: Configure Terminator
+  hosts: all
+  roles:
+    - terminator

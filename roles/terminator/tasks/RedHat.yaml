@@ -1,0 +1,26 @@
+---
+- name: Install hack-fonts 
+  yum:
+    name: source-foundry-hack-fonts.noarch
+    state: present
+  become: yes
+
+- name: Install tmux package
+  yum:
+    name: tmux
+    state: present
+  become: yes
+
+- name: Install terminator package
+  yum:
+    name: terminator
+    state: present
+  become: yes
+
+- name: Render terminator config file
+  template:
+    src: config.j2
+    dest: "{{ ansible_env.HOME }}/.config/terminator/config"
+    mode: '0644'
+
+
